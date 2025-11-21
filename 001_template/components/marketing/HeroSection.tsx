@@ -17,22 +17,20 @@ export function HeroSection() {
     const isHeadless = () => {
       // Check for query parameter override
       if (window.location.search.includes("no-animations")) {
+        console.log("Skipping animation: no-animations parameter detected");
         return true;
       }
 
       // Check for headless browser indicators (Puppeteer, Playwright, Selenium)
       if (navigator.webdriver) {
+        console.log("Skipping animation: navigator.webdriver detected");
         return true;
       }
 
       // Check for headless Chrome/Puppeteer in user agent
       const ua = navigator.userAgent.toLowerCase();
       if (ua.includes("headless")) {
-        return true;
-      }
-
-      // Respect user preference for reduced motion
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        console.log("Skipping animation: headless user agent detected");
         return true;
       }
 
