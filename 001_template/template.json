@@ -1,0 +1,60 @@
+{
+  "id": "courses-001",
+  "name": "Template 001",
+  "category": "courses",
+  "description": "Professional online course platform template designed for ASWB exam preparation and educational services. Features a stunning Vanta.js animated hero section with glassmorphism effects, comprehensive course sales pages with pricing tiers, student testimonials, and an integrated dashboard for course management. Perfect for educators, coaches, and online course creators looking to build a modern, conversion-optimized learning platform.",
+  "version": "1.0.0",
+  "featured": false,
+  "preview": {
+    "thumbnail": "/previews/courses-001/thumbnail.jpg",
+    "screenshots": [],
+    "demoUrl": "https://courses-001.website.btytechnology.com"
+  },
+  "features": [
+    "Fully responsive mobile-first design with optimized layouts for all devices",
+    "Vanta.js FOG animated 3D background with custom blue color scheme",
+    "Glassmorphism UI design with backdrop blur effects on navigation and hero section",
+    "Sticky hero section with parallax scroll effect on desktop",
+    "YouTube video integration with autoplay capabilities",
+    "Multi-page architecture with dedicated sales, FAQ, success stories, and dashboard pages",
+    "Authentication system with NextAuth integration and login page",
+    "Stripe payment integration for course checkout with multiple payment options",
+    "Student dashboard with progress tracking, statistics, and achievement badges",
+    "Course curriculum display with module breakdown and lesson tracking",
+    "Testimonial cards with star ratings, pass results, and student credentials",
+    "Lead magnet section with email capture form for free resources",
+    "FAQ page with searchable accordion interface and category filtering",
+    "Pricing cards with feature comparison and payment plan options",
+    "Custom typography system using Poppins, Open Sans, and Sora fonts from Google Fonts",
+  ],
+  "techStack": [
+    "Next.js 14",
+    "React 18",
+    "TypeScript 5",
+    "Tailwind CSS 3",
+    "Framer Motion 11",
+    "NextAuth 4",
+    "Stripe 14",
+    "React Hook Form 7",
+    "Zod 3",
+    "Lucide React Icons",
+    "Vanta.js",
+    "Three.js",
+    "Google Fonts (Poppins, Open Sans, Sora)",
+    "clsx & tailwind-merge"
+  ],
+  "colors": {
+    "primary": "#2C5F7F",
+    "secondary": "#FAFAFA",
+    "accent": "#E74C3C"
+  },
+  "pages": [
+    "Home",
+    "Sales",
+    "Checkout",
+    "Login",
+    "FAQ",
+    "Success Stories",
+    "Course Dashboard"
+  ]
+}
