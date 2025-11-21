@@ -1,6 +1,6 @@
 {
   "id": "courses-001",
-  "name": "Template 001",
+  "name": "StudyWithJohn",
   "category": "courses",
   "description": "Professional online course platform template designed for ASWB exam preparation and educational services. Features a stunning Vanta.js animated hero section with glassmorphism effects, comprehensive course sales pages with pricing tiers, student testimonials, and an integrated dashboard for course management. Perfect for educators, coaches, and online course creators looking to build a modern, conversion-optimized learning platform.",
   "version": "1.0.0",
@@ -25,7 +25,7 @@
     "Lead magnet section with email capture form for free resources",
     "FAQ page with searchable accordion interface and category filtering",
     "Pricing cards with feature comparison and payment plan options",
-    "Custom typography system using Poppins, Open Sans, and Sora fonts from Google Fonts",
+    "Custom typography system using Poppins, Open Sans, and Sora fonts from Google Fonts"
   ],
   "techStack": [
     "Next.js 14",
