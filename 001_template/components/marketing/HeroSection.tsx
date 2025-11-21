@@ -13,6 +13,37 @@ declare global {
 
 export function HeroSection() {
   useEffect(() => {
+    // Detect if running in a headless browser or screenshot context
+    const isHeadless = () => {
+      // Check for query parameter override
+      if (window.location.search.includes("no-animations")) {
+        return true;
+      }
+
+      // Check for headless browser indicators (Puppeteer, Playwright, Selenium)
+      if (navigator.webdriver) {
+        return true;
+      }
+
+      // Check for headless Chrome/Puppeteer in user agent
+      const ua = navigator.userAgent.toLowerCase();
+      if (ua.includes("headless")) {
+        return true;
+      }
+
+      // Respect user preference for reduced motion
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return true;
+      }
+
+      return false;
+    };
+
+    // Skip animation in headless environments
+    if (isHeadless()) {
+      return;
+    }
+
     // Initialize Vanta.js animation when scripts are loaded
     const initVanta = () => {
       if (window.VANTA && typeof window.VANTA.FOG === "function") {
@@ -34,10 +65,10 @@ export function HeroSection() {
     };
 
     // Check if scripts are already loaded
-    if (window.VANTA && !window.location.search.includes("no-animations")) {
+    if (window.VANTA) {
       initVanta();
-    } else if (!window.location.search.includes("no-animations")) {
-      // Wait for scripts to load
+    } else {
+      // Wait for scripts to load with timeout safety
       const timer = setTimeout(initVanta, 1000);
       return () => clearTimeout(timer);
     }
